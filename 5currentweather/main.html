@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <script></script>
+  <body>
+    <div class="container">
+      <h2>Current Weather</h2>
+      <div style="margin-bottom: 15px">
+        <label style="display: block; margin-bottom: 5px" for="user-name"
+          >enter city name:</label
+        >
+        <input
+          style="
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+          type="text"
+          id="city"
+          name="city"
+          placeholder="City name"
+          onkeyup=""
+          required
+        />
+        <br /><br />
+        <button id="getweatherbtn">Get Weather</button>
+      </div>
+      <img id="pic" /><br />
+      <span id="name" style="color: green"></span><br />
+      <span id="lname" style="color: green"></span>
+    </div>
+  </body>
+</html>
