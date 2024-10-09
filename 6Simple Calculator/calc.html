@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="calc.js"></script>
+    <link rel="stylesheet" href="calc.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td colspan="4">
+            <div class="displaydiv">
+              <span id="display"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <p>
+            <td>
+              <div class="keys"></div>
+            </td>
+            <td><input class="keys" type="button" value="C" /></td>
+            <td><input class="keys" type="button" value="/" /></td>
+            <td><input class="keys" type="button" value="x" /></td>
+          </p>
+        </tr>
+        <tr>
+          <td><input class="keys" type="button" value="7" /></td>
+          <td><input class="keys" type="button" value="8" /></td>
+          <td><input class="keys" type="button" value="9" /></td>
+          <td><input class="keys" type="button" value="+" /></td>
+        </tr>
+        <tr>
+          <td><input class="keys" type="button" value="4" /></td>
+          <td><input class="keys" type="button" value="5" /></td>
+          <td><input class="keys" type="button" value="6" /></td>
+          <td><input class="keys" type="button" value="-" /></td>
+        </tr>
+        <tr>
+          <td><input class="keys" type="button" value="1" /></td>
+          <td><input class="keys" type="button" value="2" /></td>
+          <td><input class="keys" type="button" value="3" /></td>
+          <td rowspan="2">
+            <input class="keyshlong" type="button" value="=" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input class="keyswlong" type="button" value="0" />
+          </td>
+          <td><input class="keys" type="button" value="." /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
