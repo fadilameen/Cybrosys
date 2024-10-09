@@ -18,7 +18,9 @@
         margin: 0;
       }
       .container {
-        background-color: white;
+        /* background-color: white; */
+        background-color: skyblue;
+
         padding: 30px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -27,6 +29,19 @@
       h2 {
         margin-bottom: 20px;
         text-align: center;
+      }
+      button {
+        margin: 2px;
+        width: 50%;
+        padding: 10px;
+        background-color: #5cb85c;
+        border: #f4f4f4;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .buttoncontainer {
+        display: flex;
       }
     </style>
   </head>
@@ -54,11 +69,31 @@
           required
         />
         <br /><br />
-        <button id="getweatherbtn">Get Weather</button>
+        <div class="buttoncontainer">
+          <button id="getweatherbtn">Get Weather</button>
+          <button id="getcurrentbtn">Get Current location</button>
+        </div>
       </div>
-      <img id="pic" /><br />
-      <span id="name" style="color: green"></span><br />
-      <span id="lname" style="color: green"></span>
+      <p><span id="error" style="color: red"></span></p>
+      <p>
+        <img id="iconimg" width="50" src="" alt="" />
+      </p>
+      <p>
+        City: <span id="citynamedisplay" style="color: green"></span>
+        <span id="icon"> </span>
+      </p>
+      <p>Condition: <span id="condition" style="color: green"></span></p>
+
+      <p>Temprature in kelvin: <span id="tempk" style="color: green"></span></p>
+      <p>
+        Temprature in Celsius: <span id="tempc" style="color: green"></span>
+      </p>
+      <p>
+        Temprature in Farenheit: <span id="tempf" style="color: green"></span>
+      </p>
+      <p>latitude: <span id="lon" style="color: green"></span></p>
+
+      <p>longitude: <span id="lat" style="color: green"></span></p>
     </div>
   </body>
 </html>
