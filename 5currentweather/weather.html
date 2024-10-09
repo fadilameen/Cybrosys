@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="weather.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="weather.js"></script>
+
+    <title>Document</title>
+  </head>
+  <script></script>
+  <body>
+    <div class="container">
+      <h2>Current Weather</h2>
+      <div style="margin-bottom: 15px">
+        <label style="display: block; margin-bottom: 5px" for="user-name"
+          >enter city name:</label
+        >
+        <input
+          style="
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+          type="text"
+          id="city"
+          name="city"
+          placeholder="City name"
+          onkeyup=""
+          required
+        />
+        <br /><br />
+        <div class="buttoncontainer">
+          <button id="getweatherbtn">Get Weather</button>
+          <button id="getcurrentbtn">Get Current location</button>
+        </div>
+      </div>
+      <p><span id="error" style="color: red"></span></p>
+      <p>
+        <img id="iconimg" width="50" src="" alt="" />
+      </p>
+      <p>
+        City: <span id="citynamedisplay" style="color: green"></span>
+        <span id="icon"> </span>
+      </p>
+      <p>Condition: <span id="condition" style="color: green"></span></p>
+
+      <p>Temprature in kelvin: <span id="tempk" style="color: green"></span></p>
+      <p>
+        Temprature in Celsius: <span id="tempc" style="color: green"></span>
+      </p>
+      <p>
+        Temprature in Farenheit: <span id="tempf" style="color: green"></span>
+      </p>
+      <p>latitude: <span id="lon" style="color: green"></span></p>
+
+      <p>longitude: <span id="lat" style="color: green"></span></p>
+    </div>
+  </body>
+</html>
