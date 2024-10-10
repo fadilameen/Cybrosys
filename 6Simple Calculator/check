@@ -1,0 +1,101 @@
+$(document).ready(function () {
+  var og;
+  var operators = ["+", "-", "/", "x"];
+
+  $("input").click(function () {
+    key = $(this).val();
+
+    if (key === "C") {
+      $("#display").html("");
+    } else if (key === "=") {
+      try {
+        expression = $("#display").html();
+        expression = expression.replaceAll("x", "*");
+        // console.log(expression);
+        len = expression.length;
+        for (let i = len - 1; i >= 0; i--) {
+          // console.log(expression[i]);
+        }
+        lastoccadd = expression.lastIndexOf("+");
+        lastoccsub = expression.lastIndexOf("-");
+        lastoccmul = expression.lastIndexOf("*");
+        lastoccdiv = expression.lastIndexOf("/");
+        if (lastoccadd != -1) {
+          lastocc = lastoccadd;
+        } else if (lastoccmul != -1) {
+          lastocc = lastoccmul;
+        } else if (lastoccsub != -1) {
+          lastocc = lastoccsub;
+        } else if (lastoccdiv != -1) {
+          lastocc = lastoccdiv;
+        }
+        console.log(las);
+        
+        result = eval(expression);
+        // console.log(result);
+
+        $("#display").html(result);
+        console.log(result);
+        eq = key;
+      } catch (error) {
+        console.log("error adinjj");
+      }
+    } else if (key === "⌫") {
+      let str = $("#display").html();
+      str = str.slice(0, -1);
+      $("#display").html(str);
+    } else {
+      var current = $("#display").html().toString();
+
+      let last = current.charAt(current.length - 1);
+
+      if (
+        (current.length === 0 &&
+          (key == "+" || key == "-" || key == "/" || key == "x")) ||
+        (last == "." && key == ".")
+      ) {
+        return;
+      }
+
+      if (operators.includes(last) && operators.includes(key)) {
+        current = current.slice(0, -1);
+      }
+      // lastoccdec = current.lastIndexOf(".");
+      // lastoccadd = current.lastIndexOf("+");
+      // lastoccsub = current.lastIndexOf("-");
+      // lastoccmul = current.lastIndexOf("x");
+      // lastoccdiv = current.lastIndexOf("/");
+
+      // if (
+      //   key == "." &&
+      //   lastoccdec > lastoccadd &&
+      //   lastoccdec > lastoccsub &&
+      //   lastoccdec > lastoccmul &&
+      //   lastoccdec > lastoccdiv &&
+      //   current.length !== 0
+      // ) {
+      //   console.log(current);
+
+      //   return;
+      //   console.log("monee");
+      // }
+      current = current + key.toString();
+      $("#display").html(current);
+      // console.log(current);
+    }
+  });
+});
+// function checkdecimal(current) {
+//   console.log(flag);
+
+//   console.log("keyy" + key);
+//   console.log("currentt" + current);
+//   if (key == ".") {
+//     if (flag == false) {
+//       flag = true;
+
+//     }else if (flag==true){
+
+//     }
+//   }
+// }
